@@ -35,8 +35,8 @@ public class TodoService {
     }
 
     public Todo alter(Todo todo){
-        Optional<Todo> op = repository.findById(todo.getId());//capturando um todo pelo id (virá em optional)
-        Todo novo = op.get(); //transformando o optional em todo
+        Optional<Todo> op = repository.findById(todo.getId());//capturando um to-do pelo id (virá em optional)
+        Todo novo = op.get(); //transformando o optional em to-do
         alterTodo(novo, todo); //alterando as informações
         return repository.save(novo); //salvando
       
